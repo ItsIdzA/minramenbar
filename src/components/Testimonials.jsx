@@ -1,4 +1,6 @@
 import Slider from 'react-slick';
+import { useTranslation } from 'react-i18next';
+
 const SlickSlider = Slider.default || Slider;
 
 const reviews = [
@@ -6,7 +8,7 @@ const reviews = [
         id: 1,
         author: "Jacqueline M",
         pfp: "/review-pfp-jacquelinem.jpg",
-        content: "Authentische Küche, Gerichte sind sehr lecker und von sehr guter Qualität, sehr nette Bedienung und keine langen Wartezeiten",
+        contentKey: "reviews.jacqueline",
         src: "Tripadvisor",
 
     },
@@ -14,19 +16,21 @@ const reviews = [
         id: 2,
         author: "Elena K",
         pfp: "/review-pfp-elenak.jpg",
-        content: "Mit Abstand die besten Ramen in der ganzen Stadt. Freundliches Personal, angemessene Preise. [...]",
+        contentKey: "reviews.elena",
         src: "Tripadvisor"
     },
     {
         id: 3,
         author: "Olga L",
         pfp: "/review-pfp-olgal.jpg",
-        content: "Super leckere Vorspeisen und Ramen, freundliche Bedienung und schneller Service :) definitiv weiterzuempfehlen! 😊",
+        contentKey: "reviews.olga",
         src: "Tripadvisor"
     },
 ]
 
 export default function Testimonials() {
+    const { t } = useTranslation();
+
     const settings = {
         dots: true,
         infinite: true,
@@ -43,11 +47,11 @@ export default function Testimonials() {
                 {/* header */}
                 <div className="not-lg:min-w-screen px-4 md:px-8 lg:px-12 flex flex-col not-lg:justify-center not-lg:items-center ">
                     <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-linear-to-b from-red-800 to-red-600 hover:from-red-500 transition duration-300 bg-clip-text text-transparent">
-                        Feedback
+                        {t("testimonials.title")}
                     </h1>
                     <h2 className="not-lg:text-center">
                         <span className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold bg-linear-to-b from-red-950 to-red-900 bg-clip-text text-transparent">
-                            Das sagen unsere Gäste:
+                            {t("testimonials.subtitle")}
                         </span>
                     </h2>
                 </div>
@@ -56,9 +60,9 @@ export default function Testimonials() {
                 {/* Large Screen */}
                 <div className="hidden lg:flex lg:w-1/2">
                     <div className="space-y-6 sm:space-y-8">
-                        {reviews.map((testimonial, key) => (
+                        {reviews.map((testimonial) => (
                             <div 
-                                key={key} 
+                                key={testimonial.id} 
                                 className="bg-red-700/80 p-4 sm:p-6 backdrop-blur-sm border border-red-950 rounded-xl sm:rounded-2xl hover:scale-103 transition duration-500 hover:shadow-2xl shadow-red-950/80"
                             >
                                 <div className="flex items-start space-x-3 sm:space-x-4">
@@ -70,7 +74,7 @@ export default function Testimonials() {
 
                                     <div className="grow">
                                         <p className="text-white text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
-                                            {testimonial.content}
+                                            {t(testimonial.contentKey)}
                                         </p>
 
                                         <div className="flex items-center space-x-2 sm:space-x-3">
@@ -103,7 +107,7 @@ export default function Testimonials() {
                             <div key={testimonial.id} className="px-8 sm:px-12">
                                 <div className="bg-red-700/80 p-4 sm:p-6 backdrop-blur-sm border border-red-950 rounded-xl sm:rounded-2xl hover:scale-101 transition duration-500 hover:shadow-lg shadow-red-950/60 w-full mx-auto">
                                     <p className="text-white text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
-                                        {testimonial.content}
+                                        {t(testimonial.contentKey)}
                                     </p>
                                     <div className="flex items-center space-x-3">
                                         <img 

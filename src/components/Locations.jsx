@@ -1,5 +1,6 @@
 import { ChevronRight, ChevronLeft, Clock, MapPin, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const locations = [
     {
@@ -32,8 +33,8 @@ const locations = [
 ]
 
 export default function Locations() {
+    const { t } = useTranslation();
     const [currentLocation, setCurrentLocation] = useState(locations[0])
-    const [direction, setDirection] = useState(1)
 
     useEffect(() => {
         console.log("currentLocation ID:" + currentLocation)
@@ -76,12 +77,12 @@ export default function Locations() {
                                             <div className="flex flex-col space-y-4">
                                                 <p className="flex flex-row space-x-2">
                                                     <MapPin />
-                                                    <span className="font-semibold">Adresse: </span>
+                                                    <span className="font-semibold">{t("locations.address")} </span>
                                                     <span className="font-light">{loc.adress}</span>
                                                 </p>
                                                 <p className="flex flex-row space-x-2">
                                                     <Phone />
-                                                    <span className="font-semibold">Telefon: </span>
+                                                    <span className="font-semibold">{t("locations.phone")} </span>
                                                     <span className="font-light">
                                                         <a 
                                                             href={`tel: ${loc.tel}`}
@@ -93,11 +94,11 @@ export default function Locations() {
                                                 </p>
                                                 <p className="flex flex-row space-x-2">
                                                     <Clock />
-                                                    <span className="font-semibold">Öffnungszeiten: </span>
-                                                    <span className="font-light">11:30 - 22:00 Uhr</span>
+                                                    <span className="font-semibold">{t("locations.hours")} </span>
+                                                    <span className="font-light">{t("locations.hoursValue")}</span>
                                                 </p>
                                                 <p className="font-extralight text-sm">
-                                                    *Reservierungen erfolgen ausschließlich telefonisch.
+                                                    {t("locations.reservationNote")}
                                                 </p>
                                             </div>
                                         </div>
@@ -112,7 +113,7 @@ export default function Locations() {
                                                     allowFullScreen="false" 
                                                     loading="lazy" 
                                                     referrerPolicy="no-referrer-when-downgrade" 
-                                                    title="Responsive Google Maps"
+                                                    title={t("locations.mapTitle")}
                                                     className="absolute left-0 top-0 border-0 h-full w-full"
                                                 />
                                             </div>
@@ -128,9 +129,9 @@ export default function Locations() {
             {/* Arrow Buttons */}
             <div className="absolute inset-y-170 inset-x-0 2xl:inset-0 z-10 max-w-screen flex items-center justify-evenly 2xl:justify-between mb-12 lg:mb-0 pointer-events-none">
                 <button 
+                    type="button"
                     onClick={() => {
                         if (currentLocation.id !== 0)  {
-                            setDirection(-1)
                             setCurrentLocation(locations[(currentLocation.id - 1) % locations.length]);
                         }
                     }}
@@ -145,9 +146,9 @@ export default function Locations() {
                     />
                 </button>
                 <button 
+                    type="button"
                     onClick={() => {
                         if (currentLocation.id !== locations.length - 1)  {
-                            setDirection(1)
                             setCurrentLocation(locations[(currentLocation.id + 1) % locations.length]);
                         }
                     }}

@@ -1,24 +1,53 @@
-import { Cat as Github } from "lucide-react";
-import { Bird as Twitter } from "lucide-react";
-import { GraduationCap as Linkedin } from "lucide-react";
-import { Mail } from "lucide-react";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { SiTripadvisor } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
-const footerLinks = {
-  Product: ["Features", "Pricing", "Security", "Roadmap", "Changelog"],
-  Company: ["About", "Blog", "Careers", "Press", "Partners"],
-  Resources: [
-    "Documentation",
-    "Help Center",
-    "Community",
-    "API Reference",
-    "Status",
-  ],
-  Legal: ["Privacy", "Terms", "Cookie Policy", "Licenses", "Compliance"],
-};
+const footerLinkGroups = [
+  {
+    categoryKey: "footer.categories.product",
+    links: [
+      { labelKey: "footer.links.features", href: "#" },
+      { labelKey: "footer.links.pricing", href: "#" },
+      { labelKey: "footer.links.security", href: "#" },
+      { labelKey: "footer.links.roadmap", href: "#" },
+      { labelKey: "footer.links.changelog", href: "#" },
+    ],
+  },
+  {
+    categoryKey: "footer.categories.company",
+    links: [
+      { labelKey: "footer.links.about", href: "#" },
+      { labelKey: "footer.links.blog", href: "#" },
+      { labelKey: "footer.links.careers", href: "#" },
+      { labelKey: "footer.links.press", href: "#" },
+      { labelKey: "footer.links.partners", href: "#" },
+    ],
+  },
+  {
+    categoryKey: "footer.categories.resources",
+    links: [
+      { labelKey: "footer.links.documentation", href: "#" },
+      { labelKey: "footer.links.helpCenter", href: "#" },
+      { labelKey: "footer.links.community", href: "#" },
+      { labelKey: "footer.links.apiReference", href: "#" },
+      { labelKey: "footer.links.status", href: "#" },
+    ],
+  },
+  {
+    categoryKey: "footer.categories.legal",
+    links: [
+      { labelKey: "footer.links.privacy", href: "#" },
+      { labelKey: "footer.links.terms", href: "#" },
+      { labelKey: "footer.links.cookiePolicy", href: "#" },
+      { labelKey: "footer.links.licenses", href: "#" },
+      { labelKey: "footer.links.compliance", href: "#" },
+    ],
+  },
+];
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="border-t-3 border-red-900 bg-red-800/90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -29,7 +58,7 @@ export default function Footer() {
               <div className="rounded-lg">
                 <img
                   src="/logo.png"
-                  alt="CodeFlow Logo"
+                  alt={t("footer.logoAlt")}
                   className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
                 />
               </div>
@@ -68,19 +97,19 @@ export default function Footer() {
           {/* Footer links - visible on sm and up */}
           <div className="sm:col-span-3 lg:col-span-4">
             <div className="grid grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
-              {Object.entries(footerLinks).map(([category, links]) => (
-                <div key={category}>
+              {footerLinkGroups.map((group) => (
+                <div key={group.categoryKey}>
                   <h3 className="font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base">
-                    {category}
+                    {t(group.categoryKey)}
                   </h3>
                   <ul className="space-y-2 sm:space-y-3">
-                    {links.map((link) => (
-                      <li key={link}>
+                    {group.links.map((link) => (
+                      <li key={link.labelKey}>
                         <a
-                          href="#"
+                          href={link.href}
                           className="text-white/80 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
                         >
-                          {link}
+                          {t(link.labelKey)}
                         </a>
                       </li>
                     ))}
@@ -94,26 +123,26 @@ export default function Footer() {
         <div className="pt-6 sm:pt-8 border-t-0 sm:border-t border-red-900">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
             <p className="text-white/80 text-xs sm:text-sm">
-              © 2026 Min Ramen Bar. All rights reserved.
+              {t("footer.copyright")}
             </p>
             <div className="flex items-center space-x-4 sm:space-x-6 text-xs sm:text-sm">
               <a
                 href="#"
                 className="text-white/80 hover:text-white transition-colors duration-200"
               >
-                Privacy Policy
+                {t("footer.privacyPolicy")}
               </a>
               <a
                 href="#"
                 className="text-white/80 hover:text-white transition-colors duration-200"
               >
-                Terms of Service
+                {t("footer.termsOfService")}
               </a>
               <a
                 href="#"
                 className="text-white/80 hover:text-white transition-colors duration-200"
               >
-                Cookie Settings
+                {t("footer.cookieSettings")}
               </a>
             </div>
           </div>

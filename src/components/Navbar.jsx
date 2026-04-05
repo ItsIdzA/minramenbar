@@ -1,8 +1,10 @@
 import { ChefHat, Home, Info, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const { t } = useTranslation();
 
     return (
         <div className="fixed flex flex-col text-amber-50 z-50 h-20">
@@ -34,34 +36,35 @@ export default function Navbar() {
                             className="flex items-center space-x-1 relative text-amber-50/90 hover:text-white transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white/70 after:transition-all after:duration-300 hover:after:w-full px-2 py-1 "
                         >
                             <Home className="w-5 h-5" />
-                            <span>Home</span>
+                            <span>{t("nav.home")}</span>
                         </a>
                         <a 
                             href="https://menury.com/r/cf13eb4ca5/Heidelberg/MinRamenBar/de" 
                             className="flex items-center space-x-1 relative text-amber-50/90 hover:text-white transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white/70 after:transition-all after:duration-300 hover:after:w-full px-2 py-1 "
                         >
                             <ChefHat className="w-5 h-5" />
-                            <span>Menu</span>
+                            <span>{t("nav.menu")}</span>
                         </a>
                         <a 
                             href="#" 
-                            className="flex items-center space-x-1 hover:bg-amber-50/90 hover:text-red-950 hover:font-semibold transition duration-200 px-2 py-1 rounded-md"
+                            className="flex items-center space-x-1 relative text-amber-50/90 hover:text-white transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white/70 after:transition-all after:duration-300 hover:after:w-full px-2 py-1 "
                         >
                             <Info className="w-5 h-5" />
-                            <span>About</span>
+                            <span>{t("nav.about")}</span>
                         </a>
                         <a 
                             href="#" 
-                            className="flex items-center space-x-1 hover:bg-amber-50/90 hover:text-red-950 hover:font-semibold transition duration-200 px-2 py-1 rounded-md"
+                            className="flex items-center space-x-1 relative text-amber-50/90 hover:text-white transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white/70 after:transition-all after:duration-300 hover:after:w-full px-2 py-1 "
                         >
                             <Phone className="w-5 h-5" />
-                            <span>Contact</span>
+                            <span>{t("nav.contact")}</span>
                         </a>
                     </div>
 
                     <button 
                         className="md:hidden"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        aria-expanded={mobileMenuOpen}
                     >
                         {mobileMenuOpen ? (
                             <X className="w-6 h-6" />
@@ -80,7 +83,7 @@ export default function Navbar() {
                             className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
                         >
                             <Home className="w-5 h-5" />
-                            <span>Home</span>
+                            <span>{t("nav.home")}</span>
                         </a>
                         <a 
                             href="https://menury.com/r/cf13eb4ca5/Heidelberg/MinRamenBar/de" 
@@ -88,7 +91,7 @@ export default function Navbar() {
                             className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
                         >
                             <ChefHat className="w-5 h-5" />
-                            <span>Menu</span>
+                            <span>{t("nav.menu")}</span>
                         </a>
                         <a 
                             href="#" 
@@ -96,7 +99,7 @@ export default function Navbar() {
                             className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
                         >
                             <Info className="w-5 h-5" />
-                            <span>About</span>
+                            <span>{t("nav.about")}</span>
                         </a>
                         <a 
                             href="#" 
@@ -104,7 +107,7 @@ export default function Navbar() {
                             className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
                         >
                             <Phone className="w-5 h-5" />
-                            <span>Contact</span>
+                            <span>{t("nav.contact")}</span>
                         </a>
                     </div>
                 )}

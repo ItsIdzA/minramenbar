@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "menu": "Speisekarte",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "welcomePrefix": "Wilkommen in der",
+    "brand": "Min Ramen Bar",
+    "visitPrefix": "Besuche uns in ",
+    "visitSuffix": "|."
+  },
+  "locations": {
+    "address": "Adresse:",
+    "phone": "Telefon:",
+    "hours": "Öffnungszeiten:",
+    "hoursValue": "11:30 - 22:00 Uhr",
+    "reservationNote": "*Reservierungen erfolgen ausschließlich telefonisch.",
+    "mapTitle": "Google Maps"
+  },
+  "ramen": {
+    "specialty": "Unsere Spezialität:",
+    "title": "Ramen",
+    "nameSuffix": "Ramen",
+    "alsoAvailable": "*auch in: ",
+    "items": {
+      "shio": {
+        "name": "Shio",
+        "base": "Salzbasis",
+        "description": "Leicht, klar und fein würzig – Shio-Ramen ist die mildeste und traditionellste Variante mit einer angenehm ausgewogenen Brühe."
+      },
+      "shoyu": {
+        "name": "Shoyu",
+        "base": "Sojasoßenbasis",
+        "description": "Herzhaft und aromatisch mit einer tiefen Umami-Note – Shoyu-Ramen ist ein Klassiker mit kräftigem, aber ausgewogenem Geschmack."
+      },
+      "miso": {
+        "name": "Miso",
+        "base": "Sojabohnenpastenbasis",
+        "description": "Cremig, würzig und intensiv – Miso-Ramen überzeugt mit einem warmen, vollmundigen Geschmack und viel Tiefe."
+      },
+      "tonkotsu": {
+        "name": "Tonkotsu",
+        "base": "Schweinebrühe",
+        "description": "Kräftig, reichhaltig und besonders cremig – Tonkotsu-Ramen ist bekannt für seine samtige Brühe und seinen intensiven Fleischgeschmack."
+      },
+      "tantanmen": {
+        "name": "Tantanmen",
+        "base": "Sojabohnenpaste & Chiliöl",
+        "description": "Scharf, nussig und aromatisch – Tantanmen bringt eine würzige Wärme mit cremiger Textur und leichtem Feuer."
+      },
+      "thaiCurry": {
+        "name": "Thai-Curry",
+        "base": "Curry-Kokos Soße",
+        "description": "Exotisch, cremig und leicht scharf – Thai Curry Ramen verbindet die Würze von Curry mit der milderen Süße von Kokos."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Feedback",
+    "subtitle": "Das sagen unsere Gäste:"
+  },
+  "reviews": {
+    "jacqueline": "Authentische Küche, Gerichte sind sehr lecker und von sehr guter Qualität, sehr nette Bedienung und keine langen Wartezeiten",
+    "elena": "Mit Abstand die besten Ramen in der ganzen Stadt. Freundliches Personal, angemessene Preise. [...]",
+    "olga": "Super leckere Vorspeisen und Ramen, freundliche Bedienung und schneller Service :) definitiv weiterzuempfehlen! 😊"
+  },
+  "footer": {
+    "logoAlt": "Min Ramen Bar Logo",
+    "categories": {
+      "product": "Produkt",
+      "company": "Unternehmen",
+      "resources": "Ressourcen",
+      "legal": "Rechtliches"
+    },
+    "links": {
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "security": "Sicherheit",
+      "roadmap": "Roadmap",
+      "changelog": "Änderungsprotokoll",
+      "about": "Über uns",
+      "blog": "Blog",
+      "careers": "Karriere",
+      "press": "Presse",
+      "partners": "Partner",
+      "documentation": "Dokumentation",
+      "helpCenter": "Hilfe-Center",
+      "community": "Community",
+      "apiReference": "API-Referenz",
+      "status": "Status",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "cookiePolicy": "Cookie-Richtlinie",
+      "licenses": "Lizenzen",
+      "compliance": "Compliance"
+    },
+    "copyright": "© 2026 Min Ramen Bar. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen",
+    "cookieSettings": "Cookie-Einstellungen"
+  },
+  "language": {
+    "switchToEnglish": "Zu Englisch wechseln",
+    "switchToGerman": "Zu Deutsch wechseln",
+    "currentDe": "DE",
+    "currentEn": "EN"
+  }
+}

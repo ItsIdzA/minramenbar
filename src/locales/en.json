@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcomePrefix": "Welcome to",
+    "brand": "Min Ramen Bar",
+    "visitPrefix": "Visit us in ",
+    "visitSuffix": "|."
+  },
+  "locations": {
+    "address": "Address:",
+    "phone": "Phone:",
+    "hours": "Opening hours:",
+    "hoursValue": "11:30 a.m. – 10:00 p.m.",
+    "reservationNote": "*Reservations are by phone only.",
+    "mapTitle": "Google Maps"
+  },
+  "ramen": {
+    "specialty": "Our specialty:",
+    "title": "Ramen",
+    "nameSuffix": "Ramen",
+    "alsoAvailable": "*also available: ",
+    "items": {
+      "shio": {
+        "name": "Shio",
+        "base": "Salt Base",
+        "description": "Light, clear, and gently seasoned—shio ramen is the mildest, most traditional style with a pleasantly balanced broth."
+      },
+      "shoyu": {
+        "name": "Shoyu",
+        "base": "Soy Sauce Base",
+        "description": "Savory and aromatic with deep umami—shoyu ramen is a classic with a rich yet balanced flavor."
+      },
+      "miso": {
+        "name": "Miso",
+        "base": "Soybean Paste Base",
+        "description": "Creamy, spicy, and intense—miso ramen offers a warm, full-bodied taste with plenty of depth."
+      },
+      "tonkotsu": {
+        "name": "Tonkotsu",
+        "base": "Pork Broth",
+        "description": "Rich, hearty, and especially creamy—tonkotsu ramen is known for its silky broth and deep meaty flavor."
+      },
+      "tantanmen": {
+        "name": "Tantanmen",
+        "base": "Soybean Paste & Chili Oil",
+        "description": "Spicy, nutty, and aromatic—tantanmen brings gentle heat with a creamy texture and a touch of fire."
+      },
+      "thaiCurry": {
+        "name": "Thai Curry",
+        "base": "Curry Coconut Sauce",
+        "description": "Exotic, creamy, and mildly spicy—Thai curry ramen combines curry spices with the softer sweetness of coconut."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Feedback",
+    "subtitle": "What our guests say:"
+  },
+  "reviews": {
+    "jacqueline": "Authentic cuisine—the dishes are delicious and high quality, the staff are very friendly, and there are no long waits.",
+    "elena": "Hands down the best ramen in town. Friendly team, fair prices. [...]",
+    "olga": "Super tasty starters and ramen, friendly service and quick service :) definitely recommend! 😊"
+  },
+  "footer": {
+    "logoAlt": "Min Ramen Bar logo",
+    "categories": {
+      "product": "Product",
+      "company": "Company",
+      "resources": "Resources",
+      "legal": "Legal"
+    },
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "security": "Security",
+      "roadmap": "Roadmap",
+      "changelog": "Changelog",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "press": "Press",
+      "partners": "Partners",
+      "documentation": "Documentation",
+      "helpCenter": "Help Center",
+      "community": "Community",
+      "apiReference": "API Reference",
+      "status": "Status",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookiePolicy": "Cookie Policy",
+      "licenses": "Licenses",
+      "compliance": "Compliance"
+    },
+    "copyright": "© 2026 Min Ramen Bar. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookieSettings": "Cookie Settings"
+  },
+  "language": {
+    "switchToEnglish": "Switch to English",
+    "switchToGerman": "Switch to German",
+    "currentDe": "DE",
+    "currentEn": "EN"
+  }
+}

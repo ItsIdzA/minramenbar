@@ -1,6 +1,5 @@
-import { use, useEffect, useLayoutEffect, useState } from "react";
-import gsap from "gsap";
-import SplitType from "split-type";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ramenOptions = [
     {
@@ -28,6 +27,7 @@ const locations = [
 ]
 
 export default function Hero() {
+    const { t } = useTranslation();
     const [selectedRamen, setSelectedRamen] = useState(ramenOptions[0]);
     const [selectedLocation, setSelectedLocation] = useState(locations[0]);
     const [displayedText, setDisplayedText] = useState("")
@@ -79,6 +79,8 @@ export default function Hero() {
                     <div className="flex flex-row lg:flex-col items-center justify-center rounded-full bg-linear-to-r from-red-200/20 to--200/20 border border-gray-100/10 backdrop-blur-md px-5 py-5 space-x-4 lg:space-x-0 lg:space-y-4">
                         {ramenOptions.map((ramen, key) => (
                             <button
+                                key={key}
+                                type="button"
                                 onClick={() => setSelectedRamen(ramenOptions[key])}
                                 className="cursor-pointer max-w-15 rounded-full overflow-hidden hover:scale-115 duration-300"
                             >
@@ -95,18 +97,18 @@ export default function Hero() {
                 <div className="py-12 text-center space-y-4 w-full">
                     {/* Title */}
                     <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl md:order-2">
-                        <span className="font-semibold text-red-950">Wilkommen in der</span>
+                        <span className="font-semibold text-red-950">{t("hero.welcomePrefix")}</span>
                         <br />
-                        <span className="font-bold bg-linear-to-r from-red-800 to-red-600 bg-clip-text text-transparent">Min Ramen Bar</span>
+                        <span className="font-bold bg-linear-to-r from-red-800 to-red-600 bg-clip-text text-transparent">{t("hero.brand")}</span>
                     </h1>
                     {/* Sub-Title */}
                     <a 
                         href="#locations"
                         className="text-lg cursor-pointer hover:underline "
                     >
-                        <span>Besuche uns in </span>
+                        <span>{t("hero.visitPrefix")}</span>
                         <span className="font-semibold">{displayedText}</span>
-                        <span>|.</span>
+                        <span>{t("hero.visitSuffix")}</span>
                     </a>
                 </div>
             </div>
