@@ -121,13 +121,13 @@ export default function Ramen() {
                                 <div className='max-w-lg mx-auto lg:mx-0 text-center lg:text-left'>
                                     {/* Title */}
                                     <h3 className="flex flex-col">
-                                        <span className="flex gap-4 items-center">
+                                        <span className="flex gap-1 lg:gap-4 items-center not-lg:justify-center relative">
                                             {/* Name */}
-                                            <span className='text-4xl sm:text-3xl lg:text-4xl font-bold'>
-                                                {_ramen.name} Ramen
+                                            <span className='text-4xl sm:text-3xl lg:text-4xl font-bold not-lg:px-8'>
+                                                {_ramen.name} {_ramen.name !== "Tantanmen" && "Ramen"}
                                             </span>
                                             {/* Spicy Icon */}
-                                            {_ramen.isSpicy && <GiChiliPepper className="text-red-600 size-8 hover:scale-105 transition duration-200"/>}
+                                            {_ramen.isSpicy && <GiChiliPepper className="not-sm:absolute not-sm:bg-red-600/25 not-sm:border border-red-600 not-sm:backdrop-blur-xs not-sm:rounded-lg right-0 p-1 text-red-600 size-8 hover:scale-105 transition duration-200"/>}
                                         </span>
                                         {/* Base */}
                                         <span className='text-2xl sm:text-1xl lg:text-2xl font-semibold text-gray-700 mb-4 sm:mb-6'>
