@@ -43,7 +43,7 @@ export default function Testimonials() {
 
     return (
         <section id="testimonials" className="py-16 lg:py-20 overflow-hidden relative flex justify-center bg-amber-50">
-            <div className="max-w-7xl lg:flex items-start gap-16">
+            <div className="max-w-7xl lg:flex items-start justify-between gap-16">
                 {/* header */}
                 <div className="not-lg:min-w-screen px-4 md:px-8 lg:px-12 flex flex-col not-lg:justify-center not-lg:items-center ">
                     <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-linear-to-b from-red-800 to-red-600 hover:from-red-500 transition duration-300 bg-clip-text text-transparent">
