@@ -1,6 +1,7 @@
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { SiTripadvisor } from "react-icons/si";
 import { useTranslation } from "react-i18next";
+import { openCookiebotRenew } from "../cookiebot.js";
 
 const socialIconClass =
   "p-2 bg-white/80 border-2 border-red-900 rounded-lg hover:bg-white transition-colors duration-200 text-red-900";
@@ -79,15 +80,7 @@ export default function Footer() {
             </a>
             <button
               type="button"
-              onClick={() => {
-                if (
-                  typeof window !== "undefined" &&
-                  window.Cookiebot &&
-                  typeof window.Cookiebot.renew === "function"
-                ) {
-                  window.Cookiebot.renew();
-                }
-              }}
+              onClick={openCookiebotRenew}
               className="text-white/80 hover:text-white transition-colors duration-200 bg-transparent border-0 p-0 cursor-pointer font-inherit"
             >
               {t("footer.cookieSettings")}

@@ -1,6 +1,7 @@
 import { ChevronRight, ChevronLeft, Clock, MapPin, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { openCookiebotRenew } from "../cookiebot.js";
 
 const locations = [
     {
@@ -115,14 +116,23 @@ export default function Locations() {
                                                     role="status"
                                                 >
                                                     <p className="leading-snug">{t("locations.mapEmbedHelp")}</p>
-                                                    <a
-                                                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Min Ramen Bar ${loc.adress} ${loc.city}`)}`}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="font-semibold text-red-800 underline decoration-red-800/50 underline-offset-2 hover:text-red-950"
-                                                    >
-                                                        {t("locations.openInGoogleMaps")}
-                                                    </a>
+                                                    <div className="flex w-full max-w-xs flex-col items-stretch gap-2 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
+                                                        <button
+                                                            type="button"
+                                                            onClick={openCookiebotRenew}
+                                                            className="rounded-lg border border-red-900/40 bg-red-800 px-3 py-2 text-xs font-semibold text-amber-50 shadow-sm transition hover:bg-red-900 sm:text-sm cursor-pointer"
+                                                        >
+                                                            {t("footer.cookieSettings")}
+                                                        </button>
+                                                        <a
+                                                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Min Ramen Bar ${loc.adress} ${loc.city}`)}`}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-center text-xs font-semibold text-red-800 underline decoration-red-800/50 underline-offset-2 hover:text-red-950 sm:text-sm"
+                                                        >
+                                                            {t("locations.openInGoogleMaps")}
+                                                        </a>
+                                                    </div>
                                                 </div>
                                                 
                                                 <iframe 
