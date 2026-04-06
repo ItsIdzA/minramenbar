@@ -17,7 +17,9 @@
     "hours": "Opening hours:",
     "hoursValue": "11:30 a.m. – 10:00 p.m.",
     "reservationNote": "*Reservations are by phone only.",
-    "mapTitle": "Google Maps"
+    "mapTitle": "Google Maps",
+    "mapEmbedHelp": "If the map stays white or empty, embedded content is often blocked—for example if marketing or tracking cookies were declined in your cookie banner, or your browser limits third-party cookies. Please adjust your cookie settings.",
+    "openInGoogleMaps": "Open in Google Maps"
   },
   "ramen": {
     "specialty": "Our specialty:",

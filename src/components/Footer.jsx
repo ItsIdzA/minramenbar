@@ -77,12 +77,21 @@ export default function Footer() {
             >
               {t("footer.termsOfService")}
             </a>
-            <a
-              href="#"
-              className="text-white/80 hover:text-white transition-colors duration-200"
+            <button
+              type="button"
+              onClick={() => {
+                if (
+                  typeof window !== "undefined" &&
+                  window.Cookiebot &&
+                  typeof window.Cookiebot.renew === "function"
+                ) {
+                  window.Cookiebot.renew();
+                }
+              }}
+              className="text-white/80 hover:text-white transition-colors duration-200 bg-transparent border-0 p-0 cursor-pointer font-inherit"
             >
               {t("footer.cookieSettings")}
-            </a>
+            </button>
           </nav>
         </div>
       </div>

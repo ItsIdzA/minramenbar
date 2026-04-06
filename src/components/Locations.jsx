@@ -40,6 +40,10 @@ export default function Locations() {
         console.log("currentLocation ID:" + currentLocation)
     })
 
+    useEffect(() => {
+        console.log("currentLocation ID:" + currentLocation)
+    })
+
     return (
         <section id="locations" className="relative flex flex-col overflow-hidden">
             {/* Section */}
@@ -105,9 +109,25 @@ export default function Locations() {
                             
                                         {/* Map */}
                                         <div className="w-120 max-w-full p-8 md:p-10 lg:p-0 flex-1 z-20">
-                                            <div className="relative rounded-2xl bg-white border border-white shadow-lg shadow-white/20 overflow-hidden pb-[75%] h-0">
+                                            <div className="relative rounded-2xl bg-white/50 backdrop-blur-sm border border-white shadow-lg shadow-white/20 overflow-hidden pb-[75%] h-0">
+                                                <div
+                                                    className="absolute inset-0 z-0 flex flex-col items-center justify-center gap-2 p-3 text-center text-xs text-red-950 sm:text-sm"
+                                                    role="status"
+                                                >
+                                                    <p className="leading-snug">{t("locations.mapEmbedHelp")}</p>
+                                                    <a
+                                                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Min Ramen Bar ${loc.adress} ${loc.city}`)}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="font-semibold text-red-800 underline decoration-red-800/50 underline-offset-2 hover:text-red-950"
+                                                    >
+                                                        {t("locations.openInGoogleMaps")}
+                                                    </a>
+                                                </div>
+                                                
                                                 <iframe 
-                                                    src={loc.mapsSrc}
+                                                    data-cookieblock-src={loc.mapsSrc}
+                                                    data-cookieconsent="marketing"
                                                     width="400" 
                                                     height="300" 
                                                     allowFullScreen="false" 

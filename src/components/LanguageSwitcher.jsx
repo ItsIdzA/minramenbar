@@ -9,7 +9,7 @@ export default function LanguageSwitcher() {
     <button
       type="button"
       onClick={() => i18n.changeLanguage(isDe ? "en" : "de")}
-      className="fixed bottom-4 right-4 z-[60] flex items-center gap-2 rounded-full border-2 border-red-900 bg-red-800/95 px-4 py-2.5 text-sm font-semibold text-amber-50 shadow-lg shadow-red-950/40 backdrop-blur-sm transition hover:bg-red-900 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200 focus-visible:ring-offset-2 focus-visible:ring-offset-amber-50"
+      className="fixed bottom-4 right-4 z-60 flex items-center gap-2 rounded-full border-2 border-red-900 bg-red-800/95 px-4 py-2.5 text-sm font-semibold text-amber-50 shadow-lg shadow-red-950/40 backdrop-blur-sm transition hover:bg-red-900 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200 focus-visible:ring-offset-2 focus-visible:ring-offset-amber-50"
       aria-label={isDe ? t("language.switchToEnglish") : t("language.switchToGerman")}
     >
       <span
