@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Locations from "./components/Locations"
@@ -5,6 +7,9 @@ import Ramen from "./components/Ramen"
 import Footer from "./components/Footer"
 import Testimonials from "./components/Testimonials"
 import LanguageSwitcher from "./components/LanguageSwitcher"
+import ReactCookieBot from "react-cookiebot"
+
+const domainGroupId = 'fadc7b09-d702-44b5-9362-9015d005be35'
 
 function NoodleWaveSeparator() {
   return (
@@ -24,6 +29,7 @@ function NoodleWaveSeparator() {
 function App() {
   return (
     <div className="bg-white text-red-950 min-h-screen w-full">
+      <ReactCookieBot domainGroupId={domainGroupId} />
       <Navbar />
       <Hero />
       <Locations />
