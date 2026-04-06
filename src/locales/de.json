@@ -18,7 +18,7 @@
     "hoursValue": "11:30 - 22:00 Uhr",
     "reservationNote": "*Reservierungen erfolgen ausschließlich telefonisch.",
     "mapTitle": "Google Maps",
-    "mapEmbedHelp": "Bleibt die Karte weiß oder leer, werden eingebettete Inhalte oft blockiert — z. B. wenn im Cookie-Banner „Marketing“- oder Tracking-Cookies abgelehnt wurden oder der Browser Drittanbieter-Cookies beschränkt. Bitte passen Sie Ihre Cookie-Einstellungen an.",
+    "mapEmbedHelp": "Manchmal erscheint die eingebettete Karte nicht — etwa wenn Cookies blockiert sind oder ein Werbeblocker den Cookie-Banner ausblendet. Den Standort können Sie alternativ bequem über den Link unten in Google Maps öffnen.",
     "openInGoogleMaps": "In Google Maps öffnen"
   },
   "ramen": {
