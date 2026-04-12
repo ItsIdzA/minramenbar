@@ -27,6 +27,7 @@ function NoodleWaveSeparator() {
 }
 
 function App() {
+
   return (
     <div className="bg-white text-red-950 min-h-screen w-full">
       <ReactCookieBot domainGroupId={domainGroupId} className="z-100"/>

@@ -34,8 +34,9 @@ const locations = [
 ]
 
 export default function Locations() {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
     const [currentLocation, setCurrentLocation] = useState(locations[0])
+    const [ isLoaded, setIsLoaded ] = useState(false)
 
     useEffect(() => {
         console.log("currentLocation ID:" + currentLocation)
@@ -144,7 +145,13 @@ export default function Locations() {
                                                     loading="lazy" 
                                                     referrerPolicy="no-referrer-when-downgrade" 
                                                     title={t("locations.mapTitle")}
-                                                    className="absolute left-0 top-0 border-0 h-full w-full"
+                                                    id="map"
+                                                    onLoad={() => setIsLoaded(true)}
+                                                    className={`absolute left-0 top-0 border-0 h-full w-full ${
+                                                        isLoaded
+                                                            ? "pointer-events-auto"
+                                                            : "pointer-events-none"
+                                                    }`}
                                                 />
                                             </div>
                                         </div>
