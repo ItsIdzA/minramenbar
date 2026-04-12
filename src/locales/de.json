@@ -57,7 +57,9 @@
         "base": "Curry-Kokos Soße",
         "description": "Exotisch, cremig und leicht scharf – Thai Curry Ramen verbindet die Würze von Curry mit der milderen Süße von Kokos."
       }
-    }
+    },
+    "toolpitSpicy": "Scharf",
+    "toolpitVegan": "Vegan"
   },
   "testimonials": {
     "title": "Feedback",

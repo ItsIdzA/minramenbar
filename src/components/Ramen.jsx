@@ -1,6 +1,7 @@
 import { Vegan } from "lucide-react";
 import { GiChiliPepper } from "react-icons/gi";
 import { useTranslation } from "react-i18next";
+import Tooltip from "./Toolpit";
 
 function NoodleWave() {
     return (
@@ -124,7 +125,10 @@ export default function Ramen() {
                                                 {name}{showRamenSuffix ? ` ${t("ramen.nameSuffix")}` : ""}
                                             </span>
                                             {/* Spicy Icon */}
-                                            {_ramen.isSpicy && <GiChiliPepper className="not-sm:absolute not-sm:bg-red-600/25 not-sm:border border-red-600 not-sm:backdrop-blur-xs not-sm:rounded-lg right-0 p-1 text-red-600 size-8 hover:scale-105 transition duration-200"/>}
+                                            {_ramen.isSpicy && 
+                                            <Tooltip text={t(`ramen.toolpitSpicy`)}>
+                                                <GiChiliPepper className="not-sm:absolute not-sm:bg-red-600/25 not-sm:border border-red-600 not-sm:backdrop-blur-xs not-sm:rounded-lg right-0 p-1 text-red-600 size-8 hover:scale-105 transition duration-200" />
+                                            </Tooltip>}
                                         </span>
                                         {/* Base */}
                                         <span className='text-2xl sm:text-1xl lg:text-2xl font-semibold text-gray-700 mb-4 sm:mb-6'>
@@ -144,9 +148,17 @@ export default function Ramen() {
                                             {_ramen.variations.map((variation, i) => (
                                                 <div key={variation} className="flex cursor-default">
                                                     <span className="flex hover:scale-110 transition duration-200">
-                                                        <span>{variation.includes('vegan') && <Vegan className={`text-green-600 scale-90 mr-1`} />}</span>
+                                                        <span>{variation.includes('vegan') && 
+                                                            <Tooltip text={t(`ramen.toolpitVegan`)}>
+                                                                <Vegan className={`text-green-600 scale-90 mr-1`} />
+                                                            </Tooltip>
+                                                        }</span>
                                                         <span className="font-medium">{variation === 'veganhot' && "+"}</span>
-                                                        <span>{variation.includes('hot') && <GiChiliPepper className="text-red-600 size-6 scale-90"/> }</span>
+                                                        <span>{variation.includes('hot') && 
+                                                            <Tooltip text={t(`ramen.toolpitSpicy`)}>
+                                                                <GiChiliPepper className="text-red-600 size-6 scale-90"/> 
+                                                            </Tooltip>
+                                                        }</span>
                                                     </span>
                                                     
                                                     <span>{i < _ramen.variations.length - 1 && ", "}</span>

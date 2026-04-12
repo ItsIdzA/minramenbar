@@ -57,7 +57,9 @@
         "base": "Curry Coconut Sauce",
         "description": "Exotic, creamy, and mildly spicy—Thai curry ramen combines curry spices with the softer sweetness of coconut."
       }
-    }
+    },
+    "toolpitSpicy": "Spicy",
+    "toolpitVegan": "Vegan"
   },
   "testimonials": {
     "title": "Feedback",
