@@ -2,6 +2,7 @@ import { Vegan } from "lucide-react";
 import { GiChiliPepper } from "react-icons/gi";
 import { useTranslation } from "react-i18next";
 import Tooltip from "./Toolpit";
+import TooltipChili from "./ToolpitChili";
 
 function NoodleWave() {
     return (
@@ -126,9 +127,12 @@ export default function Ramen() {
                                             </span>
                                             {/* Spicy Icon */}
                                             {_ramen.isSpicy && 
-                                            <Tooltip text={t(`ramen.toolpitSpicy`)}>
-                                                <GiChiliPepper className="not-sm:absolute not-sm:bg-red-600/25 not-sm:border border-red-600 not-sm:backdrop-blur-xs not-sm:rounded-lg right-0 p-1 text-red-600 size-8 hover:scale-105 transition duration-200" />
-                                            </Tooltip>}
+                                                <div className="not-lg:absolute right-0 sm:right-1/6 flex items-center">
+                                                <TooltipChili text={t(`ramen.toolpitSpicy`)}>
+                                                    <GiChiliPepper className=" not-sm:bg-red-600/25 not-sm:border border-red-600 not-sm:backdrop-blur-xs not-sm:rounded-lg p-1 text-red-600 size-8 hover:scale-105 transition duration-200" />
+                                                </TooltipChili>
+                                                </div>
+                                            }
                                         </span>
                                         {/* Base */}
                                         <span className='text-2xl sm:text-1xl lg:text-2xl font-semibold text-gray-700 mb-4 sm:mb-6'>
