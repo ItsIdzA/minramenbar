@@ -127,10 +127,10 @@ export default function Ramen() {
                                             </span>
                                             {/* Spicy Icon */}
                                             {_ramen.isSpicy && 
-                                                <div className="not-lg:absolute right-0 sm:right-1/6 flex items-center">
-                                                <TooltipChili text={t(`ramen.toolpitSpicy`)}>
-                                                    <GiChiliPepper className=" not-sm:bg-red-600/25 not-sm:border border-red-600 not-sm:backdrop-blur-xs not-sm:rounded-lg p-1 text-red-600 size-8 hover:scale-105 transition duration-200" />
-                                                </TooltipChili>
+                                                <div className="not-lg:absolute right-1/16 sm:right-1/6 flex items-center">
+                                                    <TooltipChili text={t(`ramen.toolpitSpicy`)}>
+                                                        <GiChiliPepper className=" not-sm:bg-red-600/25 not-sm:border border-red-600 not-sm:backdrop-blur-xs not-sm:rounded-lg p-1 text-red-600 size-8 hover:scale-105 transition duration-200" />
+                                                    </TooltipChili>
                                                 </div>
                                             }
                                         </span>
