@@ -4,7 +4,20 @@ import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
     const { t } = useTranslation();
+
+    const changeMobileMenuState = () => {
+        if (mobileMenuOpen) {
+            setIsClosing(true)
+            setTimeout(() => {
+                setMobileMenuOpen(false)
+            }, 500)
+        } else {
+            setIsClosing(false)
+            setMobileMenuOpen(true)
+        }
+    }
 
     return (
         <div className="fixed flex flex-col text-amber-50 z-50 h-20">
@@ -63,7 +76,7 @@ export default function Navbar() {
 
                     <button 
                         className="md:hidden"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        onClick={changeMobileMenuState}
                         aria-expanded={mobileMenuOpen}
                     >
                         {mobileMenuOpen ? (
@@ -77,42 +90,50 @@ export default function Navbar() {
             </nav>
             {/* Mobile Menu */}
                 {mobileMenuOpen && (
-                    <div className="absolute top-[90%] md:hidden min-w-screen bg-red-900/90 backdrop-blur-sm text-amber-50 p-4 z-0 space-y-2 animate-in slide-in-from-top duration-500">                        <a 
-                            href="/" 
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
-                        >
-                            <Home className="w-5 h-5" />
-                            <span>{t("nav.home")}</span>
-                        </a>
-                        <hr className="border-white/40"/>
-                        <a 
-                            href="https://menury.com/r/cf13eb4ca5/Heidelberg/MinRamenBar/de" 
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
-                        >
-                            <ChefHat className="w-5 h-5" />
-                            <span>{t("nav.menu")}</span>
-                        </a>
-                        <hr className="border-white/40"/>
-                        <a 
-                            href="#" 
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
-                        >
-                            <Info className="w-5 h-5" />
-                            <span>{t("nav.about")}</span>
-                        </a>
-                        <hr className="border-white/40"/>
-                        <a 
-                            href="#" 
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
-                        >
-                            <Phone className="w-5 h-5" />
-                            <span>{t("nav.contact")}</span>
-                        </a>
-                    </div>
+                    <>
+                        <div 
+                            className={`fixed inset-0 bg-black/30 backdrop-blur-xs z-0 transition duration-500 ${isClosing ? "fade-out" : "fade-in"} `}
+                            onClick={changeMobileMenuState}
+                        />
+
+                        <div className={`absolute top-[90%] md:hidden min-w-screen bg-red-900/90 backdrop-blur-sm text-amber-50 p-4 z-1 space-y-2 animate-in duration-500 ${isClosing ? "slide-out-to-top" : "slide-in-from-top"}`}>                        
+                            <a 
+                                href="/" 
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
+                            >
+                                <Home className="w-5 h-5" />
+                                <span>{t("nav.home")}</span>
+                            </a>
+                            <hr className="border-white/40"/>
+                            <a 
+                                href="https://menury.com/r/cf13eb4ca5/Heidelberg/MinRamenBar/de" 
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
+                            >
+                                <ChefHat className="w-5 h-5" />
+                                <span>{t("nav.menu")}</span>
+                            </a>
+                            <hr className="border-white/40"/>
+                            <a 
+                                href="#" 
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
+                            >
+                                <Info className="w-5 h-5" />
+                                <span>{t("nav.about")}</span>
+                            </a>
+                            <hr className="border-white/40"/>
+                            <a 
+                                href="#" 
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
+                            >
+                                <Phone className="w-5 h-5" />
+                                <span>{t("nav.contact")}</span>
+                            </a>
+                        </div>
+                    </>
                 )}
         </div>
     )

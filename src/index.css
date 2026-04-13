@@ -5,8 +5,20 @@
     animation-fill-mode: both;
   }
 
+  .fade-in {
+    animation-name: fadeIn;
+  }
+
   .slide-in-from-top {
     animation-name: slideInFromTop;
+  }
+
+  .fade-out {
+    animation-name: fadeOut;
+  }
+
+  .slide-out-to-top {
+    animation-name: slideOutToTop;
   }
 
   .spin {
@@ -24,6 +36,35 @@
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes slideOutToTop {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
   }
 }
 
