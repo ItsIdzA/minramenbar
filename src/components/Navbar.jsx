@@ -32,7 +32,7 @@ export default function Navbar() {
                     {/* Navigation Links */}
                     <div className="hidden md:flex md:space-x-4 lg:space-x-8">
                         <a 
-                            href="#" 
+                            href="/" 
                             className="flex items-center space-x-1 relative text-amber-50/90 hover:text-white transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white/70 after:transition-all after:duration-300 hover:after:w-full px-2 py-1 "
                         >
                             <Home className="w-5 h-5" />
@@ -78,13 +78,14 @@ export default function Navbar() {
             {/* Mobile Menu */}
                 {mobileMenuOpen && (
                     <div className="absolute top-[90%] md:hidden min-w-screen bg-red-900/90 backdrop-blur-sm text-amber-50 p-4 z-0 space-y-2 animate-in slide-in-from-top duration-500">                        <a 
-                            href="#" 
+                            href="/" 
                             onClick={() => setMobileMenuOpen(false)}
                             className="flex items-center space-x-1 hover:bg-amber-50 hover:text-red-950 px-2 py-1 rounded-md"
                         >
                             <Home className="w-5 h-5" />
                             <span>{t("nav.home")}</span>
                         </a>
+                        <hr className="border-white/40"/>
                         <a 
                             href="https://menury.com/r/cf13eb4ca5/Heidelberg/MinRamenBar/de" 
                             onClick={() => setMobileMenuOpen(false)}
@@ -93,6 +94,7 @@ export default function Navbar() {
                             <ChefHat className="w-5 h-5" />
                             <span>{t("nav.menu")}</span>
                         </a>
+                        <hr className="border-white/40"/>
                         <a 
                             href="#" 
                             onClick={() => setMobileMenuOpen(false)}
@@ -101,6 +103,7 @@ export default function Navbar() {
                             <Info className="w-5 h-5" />
                             <span>{t("nav.about")}</span>
                         </a>
+                        <hr className="border-white/40"/>
                         <a 
                             href="#" 
                             onClick={() => setMobileMenuOpen(false)}
