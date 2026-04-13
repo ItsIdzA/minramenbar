@@ -30,6 +30,8 @@ export default function Tooltip({ text, children }) {
     <div
       className="absolute sm:relative flex sm:w-auto items-center"
       ref={wrapperRef}
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
       onClick={handleTouch}
     >
       {children}

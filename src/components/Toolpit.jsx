@@ -30,6 +30,8 @@ export default function Tooltip({ text, children }) {
     <div
       className="relative inline-block"
       ref={wrapperRef}
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
       onClick={handleTouch}
     >
       {children}
