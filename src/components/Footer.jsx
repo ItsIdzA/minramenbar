@@ -23,7 +23,7 @@ export default function Footer() {
               className="w-9 h-9 sm:w-10 sm:h-10 rounded-full ring-2 ring-red-950/40"
             />
             <span className="text-base sm:text-lg font-bold tracking-tight">
-              Min Ramen Bar
+              Ramen Bar
             </span>
           </a>
 

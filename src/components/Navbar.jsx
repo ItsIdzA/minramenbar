@@ -31,12 +31,12 @@ export default function Navbar() {
                         >
                             <img 
                                 src="/logo.png" 
-                                alt="Min Ramen Bar Logo"
+                                alt="Ramen Bar Logo"
                                 className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-12 md:h-12 mr-2"
                             />
                             <div>
                                 <span className="text-xl font-semibold relative after:absolute after:left-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:bg-amber-50 after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full">
-                                    Min Ramen Bar
+                                    Ramen Bar
                                 </span>
                             </div>
                         </a>
