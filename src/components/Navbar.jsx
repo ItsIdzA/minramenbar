@@ -52,7 +52,7 @@ export default function Navbar() {
                             <span>{t("nav.home")}</span>
                         </a>
                         <a 
-                            href="https://menury.com/r/cf13eb4ca5/Heidelberg/MinRamenBar/de" 
+                            href="#" 
                             className="flex items-center space-x-1 relative text-amber-50/90 hover:text-white transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white/70 after:transition-all after:duration-300 hover:after:w-full px-2 py-1 "
                         >
                             <ChefHat className="w-5 h-5" />
