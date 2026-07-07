@@ -8,28 +8,28 @@ const locations = [
         id: 0,
         city: "Mannheim",
         img: "/bar-mannheim.jpg",
-        tel: "0176 76331912",
-        email: "min.ramen.mannheim@gmail.com",
-        adress: "M7 11, 68161 Mannheim",
-        mapsSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1832.8791416944148!2d8.471438264929374!3d49.48294781990191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797cd18bce262d1%3A0xaf05bba9c0ada1ff!2sMin%20Ramen%20Bar!5e0!3m2!1sde!2sde!4v1775071147652!5m2!1sde!2sde"
+        tel: "0176 12345678",
+        email: "ramen.mannheim@gmail.com",
+        adress: "Friedrichsplatz, 68165 Mannheim",
+        mapsSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2298.1977518713197!2d8.473953174395419!3d49.48424442515659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797cefdccd9c463%3A0x895c4ac9d55ad187!2sWasserturm%20Mannheim!5e1!3m2!1sde!2sde!4v1783462725165!5m2!1sde!2sde"
     },
     {
         id: 1,
         city: "Heidelberg",
         img: "/bar-heidelberg.jpg",
-        tel: "0176 32439486",
-        email: "min.ramen.heidelberg@gmail.com",
-        adress: "Neugasse 17, 69117 Heidelberg",
-        mapsSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917.8179233988902!2d8.695158233440878!3d49.409262907516734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797c104ae8dfeb1%3A0x36d11b38da68ba81!2sMin%20Ramen%20Bar!5e0!3m2!1sde!2sde!4v1775074149329!5m2!1sde!2sde"
+        tel: "0176 12345678",
+        email: "ramen.heidelberg@gmail.com",
+        adress: "Schlosshof 1, 69117 Heidelberg",
+        mapsSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.9177202933583!2d8.712609543088757!3d49.41041066928239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797c100ca43db93%3A0x6d672e3649e97eea!2sSchloss%20Heidelberg!5e1!3m2!1sde!2sde!4v1783462904415!5m2!1sde!2sde"
     },
     {
         id: 2,
         city: "Karlsruhe",
         img: "/bar-karlsruhe.jpg",
-        tel: "0721 14597578",
-        email: "",
-        adress: "Waldstr. 19, 76133 Karlsruhe",
-        mapsSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778.0382619734878!2d8.398613494127789!3d49.010616519957225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479707e28f8df8cb%3A0x6c041c10a5155a28!2sMin%20Ramen%20Bar!5e0!3m2!1sde!2sde!4v1775074095848!5m2!1sde!2sde"
+        tel: "0721 12345678",
+        email: "ramen.karlsruhe@gmail.com",
+        adress: "Schloßbezirk 10, 76131 Karlsruhe",
+        mapsSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6562.564101247275!2d8.401913388339201!3d49.01347685621553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797064f2b39cc9f%3A0x6a36d070ba4c7bad!2sSchloss%20Karlsruhe!5e1!3m2!1sde!2sde!4v1783462994852!5m2!1sde!2sde"
     },
 ]
 
